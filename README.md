@@ -38,7 +38,7 @@ O projeto não se conecta à conta Seller Central e não controla anúncios, ped
 - Guarda ficha de produto com link, nome, fornecedor, custo, preço de venda, imagem e notas.
 - Tenta preencher nome, preço e imagem a partir do link. Dependendo do resultado, colar o link pode salvar o produto automaticamente ou abrir os dados para revisão.
 - Agrupa produtos em listas por fornecedor, categoria, campanha ou outro critério. Cada lista pode ter uma cor pronta ou personalizada.
-- Deixa pesquisar, filtrar por lista, ordenar e fixar produtos importantes no topo.
+- Deixa pesquisar, filtrar por **Todas**, **Meus fornecedores**, uma lista específica ou **Fixados** (em um atalho separado), ordenar e fixar produtos importantes no topo.
 - Mostra o lucro líquido estimado pela conta **preço de venda − custo do fornecedor**. Esse valor **não desconta** comissão, taxas ou impostos da Amazon, frete FBM, embalagem, anúncios ou outros custos.
 - Salva o catálogo automaticamente no navegador e permite baixar/restaurar um backup JSON. Restaurar acrescenta dados que ainda não existem no catálogo, sem substituir os produtos já salvos.
 - Pode abrir offline depois que os arquivos do app forem armazenados em cache. Buscar dados externos e carregar imagens que não estejam disponíveis localmente exige internet.

@@ -144,6 +144,14 @@
       </label>
     </div>
 
+    <div class="atalho-fixados" id="atalhoFixados" hidden>
+      <button type="button" class="chip" id="btnFiltroFixados" aria-pressed="false">
+        <svg aria-hidden="true"><use href="#i-fixar"/></svg>
+        <span>Fixados</span>
+        <span class="chip__contagem" id="contagemFixados">0</span>
+      </button>
+    </div>
+
     <div id="painelCatalogo"></div>
 
     <div class="vazio" id="catalogoVazio" hidden>
@@ -360,7 +368,7 @@
       <div class="produto__semfoto" hidden>
         <svg aria-hidden="true"><use href="#i-foto"/></svg>
       </div>
-      <span class="produto__fixado" hidden aria-label="Fixado no topo">
+      <span class="produto__fixado" hidden role="img" aria-label="Fixado no topo">
         <svg aria-hidden="true"><use href="#i-fixar"/></svg>
       </span>
     </div>

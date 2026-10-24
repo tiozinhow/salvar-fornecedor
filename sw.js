@@ -1,7 +1,7 @@
 'use strict';
 
 const PREFIXO_CACHE = 'fornecedores-';
-const VERSAO = 'fornecedores-v14';
+const VERSAO = 'fornecedores-v16';
 const CASCA = [
   './',
   './index.html',
