@@ -49,7 +49,7 @@ O projeto não se conecta à conta Seller Central e não controla anúncios, ped
 2. Cole um link de produto. O app tenta buscar os dados disponíveis; confira nome, foto e preço, pois a busca automática pode não encontrar tudo.
 3. Preencha o **custo do fornecedor** e, se souber, o **preço de venda**. Você também pode guardar o nome do fornecedor, uma nota e escolher uma lista.
 4. No **Catálogo**, pesquise os produtos ou filtre pelas listas. Os itens sem lista aparecem em **Meus fornecedores**.
-5. Em **Configuração**, crie e edite listas, escolha cores, faça backups e encontre as opções do app. O botão **Como funcionam as listas?** explica a organização.
+5. Em **Configuração**, crie e edite listas, escolha cores, faça backups, encontre as opções do app e acesse outros projetos. O botão **Como funcionam as listas?** explica a organização.
 
 O lucro exibido é apenas uma estimativa inicial: por exemplo, R$ 100 de venda menos R$ 40 de custo do fornecedor resulta em R$ 60 estimados, antes dos custos que o app não calcula.
 
