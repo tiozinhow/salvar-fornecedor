@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Meus fornecedores — catálogo de produtos</title>
+<meta name="description" content="Organize produtos e fornecedores com custo, preço de venda e lucro estimado para revenda.">
+<meta name="theme-color" content="#0B0F1E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Fornecedores">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icone-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg class="icones" aria-hidden="true" focusable="false">
+  <symbol id="i-catalogo" viewBox="0 0 24 24">
+    <path d="M4 6.4h2.6M4 12h2.6M4 17.6h2.6M10.2 6.4H20M10.2 12H20M10.2 17.6H20"/>
+  </symbol>
+  <symbol id="i-somar" viewBox="0 0 24 24">
+    <path d="M12 5.5v13M5.5 12h13"/>
+  </symbol>
+  <symbol id="i-lista" viewBox="0 0 24 24">
+    <path d="M3.2 7.2a2 2 0 0 1 2-2h4.1l1.9 2.3h7.6a2 2 0 0 1 2 2v8.3a2 2 0 0 1-2 2H5.2a2 2 0 0 1-2-2Z"/>
+  </symbol>
+  <symbol id="i-fixar" viewBox="0 0 24 24">
+    <path d="M9.4 3.6h5.2M10 3.6v5.2L7.5 12.2a1 1 0 0 0 .7 1.7h7.6a1 1 0 0 0 .7-1.7L14 8.8V3.6M12 14v6.4"/>
+  </symbol>
+  <symbol id="i-busca" viewBox="0 0 24 24">
+    <circle cx="10.8" cy="10.8" r="6.3"/>
+    <path d="M15.6 15.6 20.5 20.5"/>
+  </symbol>
+  <symbol id="i-pontos" viewBox="0 0 24 24">
+    <circle cx="5.4" cy="12" r="1.7" fill="currentColor" stroke="none"/>
+    <circle cx="12" cy="12" r="1.7" fill="currentColor" stroke="none"/>
+    <circle cx="18.6" cy="12" r="1.7" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="i-copiar" viewBox="0 0 24 24">
+    <rect x="8.8" y="8.8" width="11" height="11" rx="2"/>
+    <path d="M5.2 15.2V5.2a2 2 0 0 1 2-2h10"/>
+  </symbol>
+  <symbol id="i-baixar" viewBox="0 0 24 24">
+    <path d="M12 3.8v10.4M7.6 10.2 12 14.6l4.4-4.4M4.5 19.5h15"/>
+  </symbol>
+  <symbol id="i-enviar" viewBox="0 0 24 24">
+    <path d="M12 20V9.6M7.6 13.6 12 9.2l4.4 4.4M4.5 4.5h15"/>
+  </symbol>
+  <symbol id="i-compartilhar" viewBox="0 0 24 24">
+    <path d="M12 3.6v10.8M8.4 7.2 12 3.6l3.6 3.6"/>
+    <path d="M7 10.4H5.6a1.8 1.8 0 0 0-1.8 1.8v6a1.8 1.8 0 0 0 1.8 1.8h12.8a1.8 1.8 0 0 0 1.8-1.8v-6a1.8 1.8 0 0 0-1.8-1.8H17"/>
+  </symbol>
+  <symbol id="i-lixeira" viewBox="0 0 24 24">
+    <path d="M4.2 6.8h15.6M9.2 6.8V5a1.2 1.2 0 0 1 1.2-1.2h3.2A1.2 1.2 0 0 1 14.8 5v1.8M6.6 6.8l.9 12a1.5 1.5 0 0 0 1.5 1.4h6a1.5 1.5 0 0 0 1.5-1.4l.9-12"/>
+  </symbol>
+  <symbol id="i-lapis" viewBox="0 0 24 24">
+    <path d="M4.4 19.6l4.1-1 10.2-10.2a2 2 0 0 0-2.9-2.9L5.6 15.7l-1.2 3.9Z"/>
+  </symbol>
+  <symbol id="i-foto" viewBox="0 0 24 24">
+    <rect x="3.4" y="5.4" width="17.2" height="13.2" rx="2"/>
+    <circle cx="9" cy="10.4" r="1.6"/>
+    <path d="M4.2 18.2 9.6 13l3 3 3.8-3.8 4 4"/>
+  </symbol>
+  <symbol id="i-abrir" viewBox="0 0 24 24">
+    <path d="M14.2 4.2h5.6v5.6M19.4 4.6l-8 8M17.8 13.6v4.6a2 2 0 0 1-2 2H5.8a2 2 0 0 1-2-2V8.2a2 2 0 0 1 2-2h4.6"/>
+  </symbol>
+  <symbol id="i-instalar" viewBox="0 0 24 24">
+    <rect x="6.6" y="2.8" width="10.8" height="18.4" rx="2.4"/>
+    <path d="M12 7.6v6.2M9.4 11.4l2.6 2.6 2.6-2.6"/>
+  </symbol>
+  <symbol id="i-x" viewBox="0 0 24 24">
+    <path d="M6 6l12 12M18 6 6 18"/>
+  </symbol>
+  <symbol id="i-mover" viewBox="0 0 24 24">
+    <path d="M3.2 7.2a2 2 0 0 1 2-2h4.1l1.9 2.3h7.6a2 2 0 0 1 2 2v8.3a2 2 0 0 1-2 2H5.2a2 2 0 0 1-2-2Z"/>
+    <path d="M9.4 14.6h5.2M12 12v5.2"/>
+  </symbol>
+  <symbol id="i-girar" viewBox="0 0 24 24">
+    <path d="M12 3.6a8.4 8.4 0 1 1-8.4 8.4"/>
+  </symbol>
+</svg>
+
+<header class="topo">
+  <div class="topo__faixa">
+    <div class="topo__texto">
+      <h1 class="topo__titulo">Meus fornecedores</h1>
+      <p class="topo__sub">Produtos e fornecedores organizados para revenda</p>
+    </div>
+    <p class="topo__resumo">
+      <span class="topo__qtd" id="resumoQtd">0 produtos</span>
+      <span class="topo__custo" id="resumoCusto">Custo R$ 0,00</span>
+      <button type="button" class="topo__baixar" id="topoInstalar" hidden>
+        <svg aria-hidden="true"><use href="#i-instalar"/></svg>
+        Baixar o app
+      </button>
+    </p>
+    <p class="topo__nota">Lucro líquido estimado = venda − custo do fornecedor; não inclui taxas ou impostos da Amazon.</p>
+  </div>
+</header>
+
+<main class="principal">
+
+  <section class="vista" id="vista-catalogo" aria-labelledby="tituloCatalogo">
+    <h2 class="oculto" id="tituloCatalogo">Catálogo</h2>
+
+    <div class="busca">
+      <svg class="busca__icone" aria-hidden="true"><use href="#i-busca"/></svg>
+      <input type="search" id="campoBusca" placeholder="Buscar produto, fornecedor ou nota" autocomplete="off" aria-label="Buscar no catálogo">
+      <button type="button" class="busca__limpar" id="btnLimparBusca" hidden aria-label="Limpar busca">
+        <svg aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+    </div>
+
+    <div class="atalhos-listas">
+      <button type="button" class="botao botao--contorno" id="btnAjudaListas">
+        <svg aria-hidden="true"><use href="#i-lista"/></svg>
+        Como funcionam as listas?
+      </button>
+      <button type="button" class="botao botao--principal" id="btnCriarListaCatalogo">
+        <svg aria-hidden="true"><use href="#i-somar"/></svg>
+        Criar lista
+      </button>
+    </div>
+
+    <div class="controles" id="controles">
+      <div class="chips" id="chipsLista" role="group" aria-label="Filtrar por lista"></div>
+      <label class="ordenar">
+        <span class="oculto">Ordenar por</span>
+        <select id="campoOrdem" aria-label="Ordenar por">
+          <option value="recentes">Mais recentes</option>
+          <option value="antigas">Mais antigos</option>
+          <option value="nome">Nome (A–Z)</option>
+          <option value="custo-maior">Maior custo</option>
+          <option value="custo-menor">Menor custo</option>
+          <option value="markup-maior">Maior margem</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="painelCatalogo"></div>
+
+    <div class="vazio" id="catalogoVazio" hidden>
+      <div class="vazio__linhas" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <h3 class="vazio__titulo">O catálogo está vazio</h3>
+      <p class="vazio__texto">Cole o link de um produto da Shopee: o app busca foto e preço e monta a ficha sozinho. Fica salvo mesmo se você fechar.</p>
+      <button type="button" class="botao botao--principal" data-ir="adicionar">Adicionar o primeiro produto</button>
+    </div>
+
+    <div class="vazio vazio--curto" id="semResultado" hidden>
+      <h3 class="vazio__titulo">Nada encontrado</h3>
+      <p class="vazio__texto">Tente outro termo, ou limpe a busca e os filtros.</p>
+      <button type="button" class="botao botao--contorno" id="btnLimparFiltros">Limpar busca e filtros</button>
+    </div>
+  </section>
+
+  <section class="vista" id="vista-adicionar" aria-labelledby="tituloAdicionar" hidden>
+    <h2 class="vista__titulo" id="tituloAdicionar">Adicionar produto</h2>
+    <p class="vista__sub" id="subtituloAdicionar">Cole o link para tentar buscar nome, preço e foto. Confira os dados e complete o fornecedor e o custo.</p>
+
+    <label class="rotulo" for="campoLink">Link do produto</label>
+    <div class="campo-link">
+      <input type="url" id="campoLink" inputmode="url" autocomplete="off" spellcheck="false"
+             placeholder="https://shopee.com.br/product/…">
+      <button type="button" class="botao-icone" id="btnColarArea" aria-label="Colar link da área de transferência" title="Colar da área de transferência">
+        <svg aria-hidden="true"><use href="#i-copiar"/></svg>
+      </button>
+    </div>
+    <p class="dica" id="dica" hidden></p>
+
+    <div class="linha-botoes">
+      <button type="button" class="botao botao--principal" id="btnBuscar">
+        <svg aria-hidden="true"><use href="#i-busca"/></svg>
+        <span id="btnBuscarTexto">Buscar dados do produto</span>
+      </button>
+    </div>
+
+    <div class="previa" id="previa" hidden>
+      <p class="previa__rotulo">Prévia da ficha</p>
+      <article class="produto produto--previa" id="previaFicha">
+        <div class="produto__midia">
+          <img id="previaImagem" alt="" hidden>
+          <div class="produto__semfoto" id="previaSemFoto">
+            <svg aria-hidden="true"><use href="#i-foto"/></svg>
+          </div>
+        </div>
+        <div class="produto__corpo">
+          <h3 class="produto__nome" id="previaNome">Nome do produto</h3>
+          <p class="produto__fornecedor" id="previaFornecedor" hidden></p>
+          <p class="produto__precos">
+            <span class="marca" id="previaCusto" hidden></span>
+            <span class="selo" id="previaSelo" hidden></span>
+            <span class="produto__venda" id="previaVenda" hidden></span>
+          </p>
+        </div>
+      </article>
+      <p class="margem" id="previaMargem" hidden>
+        <span id="previaLucro"></span>
+        <span id="previaMarkup"></span>
+      </p>
+    </div>
+
+    <div class="formulario" id="formulario" hidden>
+      <label class="rotulo" for="campoNome">Nome</label>
+      <input type="text" id="campoNome" autocomplete="off" placeholder="Ex.: Fone bluetooth TWS">
+
+      <div class="duplas">
+        <div>
+          <label class="rotulo" for="campoCusto">Custo do fornecedor</label>
+          <input type="text" id="campoCusto" inputmode="decimal" autocomplete="off" placeholder="Ex.: 89,90">
+        </div>
+        <div>
+          <label class="rotulo" for="campoVenda">Preço de venda <span class="rotulo__opcional">(opcional)</span></label>
+          <input type="text" id="campoVenda" inputmode="decimal" autocomplete="off" placeholder="Ex.: 149,90">
+        </div>
+      </div>
+
+      <label class="rotulo" for="campoFornecedor">Fornecedor <span class="rotulo__opcional">(opcional)</span></label>
+      <input type="text" id="campoFornecedor" autocomplete="off" placeholder="Ex.: Loja do Zé">
+
+      <label class="rotulo" for="campoImagem">Link da foto</label>
+      <input type="url" id="campoImagem" inputmode="url" autocomplete="off" spellcheck="false" placeholder="https://…">
+
+      <span class="rotulo">Lista</span>
+      <div class="chips chips--form" id="chipsForm" role="group" aria-label="Lista do produto"></div>
+
+      <label class="rotulo" for="campoNota">Nota <span class="rotulo__opcional">(opcional)</span></label>
+      <textarea id="campoNota" rows="2" placeholder="Ex.: pedir 10 unidades, frete grátis acima de R$ 50"></textarea>
+    </div>
+
+    <div class="linha-botoes" id="linhaSalvar" hidden>
+      <button type="button" class="botao botao--principal botao--grande" id="btnSalvar">Salvar produto</button>
+      <button type="button" class="botao botao--contorno" id="btnCancelarEdicao" hidden>Cancelar edição</button>
+    </div>
+  </section>
+
+  <section class="vista" id="vista-listas" aria-labelledby="tituloConfiguracao" hidden>
+    <h2 class="vista__titulo" id="tituloConfiguracao">Configuração</h2>
+    <p class="vista__sub">Organize seus produtos em listas e gerencie as opções do catálogo.</p>
+    <div class="atalhos-listas atalhos-listas--configuracao">
+      <button type="button" class="botao botao--contorno" id="btnAjudaListasConfiguracao">
+        <svg aria-hidden="true"><use href="#i-lista"/></svg>
+        Como funcionam as listas?
+      </button>
+    </div>
+    <div class="listas" id="painelListas"></div>
+    <div class="linha-botoes">
+      <button type="button" class="botao botao--contorno" id="btnNovaLista">
+        <svg aria-hidden="true"><use href="#i-somar"/></svg>
+        Nova lista
+      </button>
+    </div>
+
+    <section class="bloco" aria-labelledby="tituloBackup">
+      <h3 class="bloco__titulo" id="tituloBackup">Backup do catálogo</h3>
+      <p class="bloco__texto">Produtos e listas são salvos automaticamente neste aparelho. Baixe um backup para levar o catálogo a outro celular ou se proteger ao limpar os dados do navegador. Restaurar adiciona produtos sem apagar os que já estão salvos.</p>
+      <p class="ultimo-backup" id="ultimoBackup"></p>
+      <div class="linha-botoes">
+        <button type="button" class="botao botao--contorno" id="btnBackup">
+          <svg aria-hidden="true"><use href="#i-baixar"/></svg>
+          Baixar backup
+        </button>
+        <button type="button" class="botao botao--contorno" id="btnCompartilharBackup" hidden>
+          <svg aria-hidden="true"><use href="#i-compartilhar"/></svg>
+          Compartilhar backup
+        </button>
+        <button type="button" class="botao botao--contorno" id="btnRestaurar">
+          <svg aria-hidden="true"><use href="#i-enviar"/></svg>
+          Restaurar backup
+        </button>
+        <input type="file" id="arquivoBackup" accept=".json,application/json" hidden>
+      </div>
+    </section>
+
+    <section class="bloco" aria-labelledby="tituloApp">
+      <h3 class="bloco__titulo" id="tituloApp">Usar como app</h3>
+      <p class="bloco__texto" id="textoInstalar">Instale na tela inicial pra abrir em tela cheia e funcionar offline.</p>
+      <div class="linha-botoes">
+        <button type="button" class="botao botao--principal" id="btnInstalar">
+          <svg aria-hidden="true"><use href="#i-instalar"/></svg>
+          Instalar no celular
+        </button>
+      </div>
+    </section>
+
+    <section class="bloco bloco--perigo" aria-labelledby="tituloApagar">
+      <h3 class="bloco__titulo" id="tituloApagar">Apagar catálogo</h3>
+      <p class="bloco__texto">Remove todos os produtos e listas deste aparelho. Baixe um backup antes, se quiser guardar.</p>
+      <div class="linha-botoes">
+        <button type="button" class="botao botao--perigo" id="btnApagarTudo">
+          <svg aria-hidden="true"><use href="#i-lixeira"/></svg>
+          Apagar tudo
+        </button>
+      </div>
+    </section>
+  </section>
+
+</main>
+
+<nav class="navegacao" aria-label="Navegação principal">
+  <button type="button" class="navegacao__item" data-ir="catalogo">
+    <svg aria-hidden="true"><use href="#i-catalogo"/></svg>
+    <span>Catálogo</span>
+  </button>
+  <button type="button" class="navegacao__item" data-ir="adicionar">
+    <svg aria-hidden="true"><use href="#i-somar"/></svg>
+    <span>Adicionar</span>
+  </button>
+  <button type="button" class="navegacao__item" data-ir="listas">
+    <svg aria-hidden="true"><use href="#i-lista"/></svg>
+    <span>Configuração</span>
+  </button>
+</nav>
+
+<dialog class="folha" id="folha">
+  <div class="folha__alca" aria-hidden="true"></div>
+  <div id="folhaConteudo"></div>
+</dialog>
+
+<dialog class="dialogo" id="dialogo">
+  <form method="dialog" id="dialogoForm">
+    <h2 class="dialogo__titulo" id="dialogoTitulo"></h2>
+    <p class="dialogo__texto" id="dialogoTexto"></p>
+    <div id="dialogoCorpo"></div>
+    <div class="dialogo__botoes">
+      <button type="button" class="botao botao--contorno" id="dialogoCancelar">Cancelar</button>
+      <button type="submit" class="botao botao--principal" id="dialogoConfirmar" value="ok">Confirmar</button>
+    </div>
+  </form>
+</dialog>
+
+<div class="aviso" id="aviso" role="status" aria-live="polite" hidden>
+  <span class="aviso__texto" id="avisoTexto"></span>
+  <button type="button" class="aviso__acao" id="avisoAcao" hidden></button>
+</div>
+
+<template id="tplProduto">
+  <article class="produto">
+    <div class="produto__midia">
+      <img loading="lazy" decoding="async" alt="">
+      <div class="produto__semfoto" hidden>
+        <svg aria-hidden="true"><use href="#i-foto"/></svg>
+      </div>
+      <span class="produto__fixado" hidden aria-label="Fixado no topo">
+        <svg aria-hidden="true"><use href="#i-fixar"/></svg>
+      </span>
+    </div>
+    <div class="produto__corpo">
+      <h3 class="produto__nome"></h3>
+      <p class="produto__fornecedor" hidden></p>
+      <p class="produto__precos">
+        <span class="marca" data-custo hidden></span>
+        <span class="selo" data-selo hidden></span>
+        <span class="produto__venda" hidden></span>
+      </p>
+      <p class="produto__lucro" hidden></p>
+    </div>
+    <div class="produto__acoes">
+      <a class="produto__abrir" target="_blank" rel="noopener" aria-label="Ir ao fornecedor — abre no app da Shopee">
+        <svg aria-hidden="true"><use href="#i-abrir"/></svg>
+        <span>Ir ao fornecedor</span>
+      </a>
+      <button type="button" class="produto__menu" aria-label="Opções do produto">
+        <svg aria-hidden="true"><use href="#i-pontos"/></svg>
+      </button>
+    </div>
+  </article>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>
